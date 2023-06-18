@@ -1,0 +1,39 @@
+
+<div class="'container">
+    <div class="row">
+        <div class="col-12">
+            <%- include('./header.ejs')%>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <%- include('./left.ejs')%>
+        </div>
+
+        <div class="col-8">
+          <form method="post" action="/add_product" > 
+<div class="input-group mb-3">
+    <label class="input-group-text" for="inputGroupFile01">Upload</label>
+    <input type="file" class="form-control"  name="upload" id="inputGroupFile01">
+  </div>
+  <form method="post" action="/add_product" >
+    <div class="mb-3 mt-3">
+      <label for="text" class="form-label">product name</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter email" name="product_name">
+    </div>
+    <div class="mb-3">
+      <label for="text" class="form-label">Product price</label>
+      <input type="text" class="form-control" id="pri" placeholder="Enter password" name="product_price">
+    </div>
+    <div class="mb-3 mt-3">
+        <label for="text" class="form-label">discount offer</label>
+        <input type="text" class="form-control" id="disc" placeholder="Enter email" name="discount_offer">
+      </div>
+   
+    <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+  </form>
+        </div>
+    </div>
+</div>
+
+

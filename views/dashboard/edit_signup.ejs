@@ -1,0 +1,27 @@
+<div class="modal-body">
+    <form method="post" action="/edit_signup/<%= data._id %>">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">name</label>
+        <input type="text" class="form-control"  name="name" value="<%= data.name %>">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">email</label>
+        <input type="email" class="form-control" name="email" value="<%= data.email %>">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">phone</label>
+        <input type="text" class="form-control" name="phone" value="<%= data.phone %>">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">message</label>
+        <input type="message" class="form-control" name="message" value="<%= data.message %>" >
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">password</label>
+        <input type="password" class="form-control" name="password" value="<%= data.password %>">
+      </div>
+
+      <button type="submit" class="btn btn-primary" name="submit">update</button>
+    </form>
+    
+  </div>

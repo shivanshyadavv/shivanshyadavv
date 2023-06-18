@@ -1,0 +1,59 @@
+<body>
+    <%- include('./header.ejs') %>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4 border">
+                <%- include('left.ejs') %>
+            </div>
+
+    
+
+
+
+<% if(data.length>0) { %>
+
+    <div class="col-lg-8 border">
+        <h1 class="text-danger text-center">view register</h1>
+    
+<table class="table">
+    <p>
+    <tr>
+        <th>User Id</th>
+        <th>name</th> <!-- first_name + last_name -->
+        <th>email</th>    <!-- <th>Category</th> -->
+        <th>password</th>
+        <th>phone</th>
+        <th>action </th>
+        <th></th>
+    </tr>
+    <% for(var i=0; i<data.length; i++) { %>
+    <tr>
+        <td><%= i %></td>
+        <td><%= data[i].name %></td>
+
+        <td><%= data[i].email %></td>
+        <td><%= data[i].password %></td>
+        <td><%= data[i].phone %></td>
+        <td>
+            <!-- <button type="button" class="btn btn-primary ">view</button> -->
+            <a role="button" href ="/delete/<%= data[i]._id %>">delete</button>
+                <a role="button" href ="/edit/<%= data[i]._id %>">edit</button>
+    
+        </td>
+        
+
+
+
+    </tr>
+    <% } %>
+</p>
+</table>
+<% } else { %>
+    no record found
+   <% } %>
+
+</div>
+
+</div>
+</div>
+</body>
